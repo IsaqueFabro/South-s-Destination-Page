@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    font-family: 'Righteous', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header  {
+    background-image: url('background_main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    
+
+}
+
+.main-title {
+    color: white;
+    font-family: 'Righteous', sans-serif;
+    font-size: 90px;
+    margin-top: 360px;
+    margin-left: 800px;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+}
+
+.main-title2 {
+    display: block;
+    font-size: 90px;
+    margin-left: -240px;
+    margin-bottom: 650px;
+    color: white;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+}
+
+.information {
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    transition: all 0.3s ease; 
+    margin: 10px 0;
+    cursor: pointer; 
+
+}
+
+
+.packages {
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 180px;
+    transition: all 0.3s ease; 
+    margin: 10px 0;
+    cursor: pointer; 
+}
+
+.photos {
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    transition: all 0.3s ease; 
+    margin: 10px 0;
+    cursor: pointer; 
+}
+
+.information:hover, .packages:hover, .photos:hover {
+    transform: translateY(-5px); 
+    font-weight: bold; 
+}
+
+
+.main-button {
+    background-color: #FDEE7A; 
+    color: white; 
+    padding: 15px 32px;
+    width: 350px;
+    height: 100px;
+    margin-top: 730px;
+    margin-left: -520px;
+    font-size: 26px; 
+    cursor: pointer; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border: #FDEE7A;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #58532b;
+    font-weight: bold; 
+    transform: translateY(-5px); 
+
+}
