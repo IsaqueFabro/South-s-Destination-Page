@@ -1,19 +1,33 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     font-family: 'Righteous', sans-serif;
     background-color: #f4f4f4;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+
 }
 
+
 header  {
-    background-image: url('background_main.jpg');
+    background-image: url('img/background_main.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
     display: flex;
+    height: 100dvh;
+    width: 100%;
     
-
+    
 }
 
 .main-title {
@@ -37,6 +51,7 @@ header  {
 }
 
 .information {
+    text-decoration: none;
     font-size: 18px;
     color: white;
     position: absolute;
@@ -50,6 +65,7 @@ header  {
 
 
 .packages {
+    text-decoration: none;
     font-size: 18px;
     color: white;
     position: absolute;
@@ -61,6 +77,7 @@ header  {
 }
 
 .photos {
+    text-decoration: none;
     font-size: 18px;
     color: white;
     position: absolute;
@@ -99,3 +116,31 @@ header  {
     transform: translateY(-5px); 
 
 }
+
+.informational-menu {
+    background-color: #93C7FF;
+    height: 80vh;
+    width: 100vw;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.packages-menu {
+    background-color: #93C7FF;
+    height: 80vh;
+    width: 100vw;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.photos-menu {
+    background-color: #93C7FF;
+    height: 80vh;
+    width: 100vw;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
