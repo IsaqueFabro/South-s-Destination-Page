@@ -52,11 +52,11 @@ header  {
 
 .information {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     position: absolute;
     top: 30px;
-    left: 30px;
+    left: 40px;
     transition: all 0.3s ease; 
     margin: 10px 0;
     cursor: pointer; 
@@ -66,11 +66,11 @@ header  {
 
 .packages {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     position: absolute;
     top: 30px;
-    left: 180px;
+    left: 210px;
     transition: all 0.3s ease; 
     margin: 10px 0;
     cursor: pointer; 
@@ -78,11 +78,11 @@ header  {
 
 .photos {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     position: absolute;
     top: 30px;
-    left: 300px;
+    left: 340px;
     transition: all 0.3s ease; 
     margin: 10px 0;
     cursor: pointer; 
@@ -144,3 +144,11 @@ header  {
     color: white;
 }
 
+.white-line {
+    width: 550px; 
+    height: 1.2px; 
+    background-color: white;
+    position: absolute;
+    top: 30px; 
+    left: 30px; 
+}
