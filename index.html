@@ -1,42 +1,46 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>South's Destinations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>South's Destinations</title>
 </head>
-
 <body>
-
     <header>
-
         <div class="white-line"></div>
-        <h1 class="main-title">
-            Descubra o mundo <span class="main-title2">com a gente!</span>
-        </h1> 
+        <h1 class="main-title">Descubra o mundo <span class="main-title2">com a gente!</span></h1>
         <button class="main-button" onclick="alert('Botão clicado!')">Clique aqui!</button>
-        <a href="#information" class="information">Informações</a>
-        <a href="#packages" class="packages">Pacotes</a>
-        <a href="#photos" class="photos">Fotos</a>
-
+        <nav>
+            <a href="#information" class="menu-link">Informações</a>
+            <a href="#packages" class="menu-link">Pacotes</a>
+            <a href="#photos" class="menu-link">Fotos</a>
+        </nav>
     </header>
 
+    <!-- carrossel animado -->
+    <section class="carrossel-container">
+        <div class="carrossel">
+            <span>Explore destinos incríveis</span>
+            <span>Viaje com conforto e segurança</span>
+            <span>Ofertas exclusivas para você</span>
+            <span>Descubra novos lugares</span>
+            <span>Aventura e lazer garantidos</span>
+
+        </div>
+    </section>
+
     <section id="information" class="informational-menu">
-        <h1 class="teste">Informações de Viagens</h1>
+        <h1>Informações de Viagens</h1>
     </section>
 
-    
     <section id="packages" class="packages-menu">
-        <h1 class="teste2">Veja os pacotes aqui</h1>
+        <h1>Veja os pacotes aqui</h1>
     </section>
 
-    
     <section id="photos" class="photos-menu">
-        <h1 class="teste3">Fotos de lugares</h1>
+        <h1>Fotos de lugares</h1>
     </section>
-
 </body>
-
 </html>
