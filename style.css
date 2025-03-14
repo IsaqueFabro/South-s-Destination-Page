@@ -108,15 +108,15 @@ header {
         font-size: 18px;
         color: #555;
     }
-    
-    /* Animação contínua */
-    @keyframes scroll-left {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-50%);
-        }
+}
+
+/* Animação contínua */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
     }
 }
 
