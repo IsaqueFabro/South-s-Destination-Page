@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-image: url('img/background_main.jpg');
+    background-image: url('./imgs/background/background_main.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -94,36 +94,27 @@ header {
     padding: 10px 0;
     position: relative;
     width: 100%;
+}
 
-    .carrossel {
-        display: flex;
-        width: max-content;
-        animation: scroll-left 15s linear infinite;
-    }
-    
-    /* Duplicamos os itens para que nunca fiquem vazios */
-    .carrossel span {
-        display: inline-block;
-        padding: 0 40px;
-        font-size: 18px;
-        color: #555;
-    }
+.marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 18px;
+    color: #555;
 }
 
 /* Animação contínua */
-@keyframes scroll-left {
-    from {
+@keyframes marquee {
+    0% {
         transform: translateX(0);
     }
-    to {
+    100% {
         transform: translateX(-50%);
     }
-}
-
-.informational-menu, .packages-menu, .photos-menu {
-    background-color: #93C7FF;
-    height: 80vh;
-    width: 100vw;
-    padding: 100px 20px;
-    color: white;
 }
