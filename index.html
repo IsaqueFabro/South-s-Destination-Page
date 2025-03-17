@@ -18,7 +18,6 @@
             <a href="#photos" class="menu-link">Fotos</a>
         </nav>
     </header>
-
     <!-- carrossel animado -->
     <section class="carrossel-container">
         <div class="marquee">
@@ -36,16 +35,83 @@
         </div>
     </section>
 
-    <section id="information" class="informational-menu">
+    <section id="information" class="menus">
         <h1>Informações de Viagens</h1>
+        <p>Planeje sua viagem com segurança e conforto. Aqui estão algumas informações úteis:</p>
+        
+        <div class="info-cards">
+            <div class="info-item">
+                <img src="imgs/hotels/bellagio2.jfif" alt="Hotel">
+                <p>Parcerias com hotéis 5 estrelas</p>
+            </div>
+            <div class="info-item">
+                <img src="imgs/icons/guide.jfif" alt="Guia turístico">
+                <p>Guias turísticos exclusivos</p>
+            </div>
+        </div>
+    
+        <h3>Perguntas Frequentes</h3>
+        <ul class="faq-list">
+            <li>📍 Quais destinos vocês oferecem?</li>
+            <li>💳 Quais são as formas de pagamento?</li>
+            <li>📆 Como faço para remarcar uma viagem?</li>
+        </ul>
     </section>
-
-    <section id="packages" class="packages-menu">
+    
+    <section id="packages" class="menus">
         <h1>Veja os pacotes aqui</h1>
+        <div class="package-grid">
+            <div class="package-card" onclick="expandCard(this)">
+                <img src="imgs/hotels/london.jfif" alt="Londres">
+                <h2> 🌇 Londres</h2>
+                <p>7 dias e 6 noites - Café da manhã incluso</p>
+                <span class="price">$ 4.999,00</span>
+            </div>
+    
+            <div class="package-card" onclick="expandCard(this)">
+                <img src="imgs/hotels/paris.jfif" alt="Paris">
+                <h2>🗼 Paris</h2>
+                <p>5 dias e 4 noites - Café da manhã incluso</p>
+                <span class="price">$ 3.799,00</span>
+            </div>
+    
+            <div class="package-card" onclick="expandCard(this)">
+                <img src="imgs/hotels/plaza.jfif" alt="Nova York">
+                <h2>🗽 Nova York</h2>
+                <p>6 dias e 5 noites - Passeios inclusos</p>
+                <span class="price">$ 5.299,00</span>
+            </div>
+        </div>
+    
+        <!-- Card Expandido -->
+        <div id="expanded-card" class="expanded-card">
+            <button class="close-btn" onclick="closeCard()">✖</button>
+            <div class="expanded-content">
+                <button class="prev-btn" onclick="prevImage()">❮</button>
+                <img id="expanded-img" src="" alt="Destino">
+                <button class="next-btn" onclick="nextImage()">❯</button>
+            </div>
+            <h2 id="expanded-title"></h2>
+            <p id="expanded-description"></p>
+            <span id="expanded-price" class="price"></span>
+        </div>
+    
+        <!-- Fundo com Blur -->
+        <div id="overlay" class="overlay" onclick="closeCard()"></div>
     </section>
-
-    <section id="photos" class="photos-menu">
+    
+    <section id="photos" class="menus">
         <h1>Fotos de lugares</h1>
+        <p>Confira alguns dos destinos mais incríveis do mundo:</p>
+        
+        <div class="photo-gallery">
+            <img src="" alt="Destino 1">
+            <img src="" alt="Destino 2">
+            <img src="" alt="Destino 3">
+            <img src="" alt="Destino 4">
+            <img src="" alt="Destino 5">
+            <img src="" alt="Destino 6">
+        </div>
     </section>
 </body>
 </html>

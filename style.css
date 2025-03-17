@@ -1,7 +1,9 @@
+/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
+/* base styles */
 body {
     font-family: 'Righteous', sans-serif;
     background-color: #f4f4f4;
@@ -11,42 +13,40 @@ body {
     box-sizing: border-box;
 }
 
+/* header section */
 header {
-    background-image: url('./imgs/background/background_main.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('./imgs/background/background_main.jpg') center/cover no-repeat;
     display: flex;
-    height: 100vh; /* Garante que o background cubra toda a tela */
-    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative; /* Mantém os elementos posicionados corretamente */
+    height: 100vh;
+    width: 100%;
+    position: relative;
 
+    /* decorative line */
     .white-line {
         width: 550px;
         height: 1.2px;
         background-color: white;
         position: absolute;
-        top: 20px; /* Ajusta a posição para reaparecer acima do menu */
+        top: 20px;
         left: 30px;
     }
 
-    .main-title {
-        color: white;
-        font-size: 90px;
-        margin-top: 200px;
-        transition: all 0.3s ease;
-    }
-    
+    /* main titles */
+    .main-title,
     .main-title2 {
-        display: block;
-        font-size: 90px;
         color: white;
+        font-size: 90px;
         transition: all 0.3s ease;
     }
 
+    .main-title {
+        margin-top: 200px;
+    }
+
+    /* main button */
     .main-button {
         background-color: #FDEE7A;
         color: white;
@@ -56,7 +56,6 @@ header {
         font-size: 26px;
         cursor: pointer;
         border-radius: 50px;
-        /* colocar um bos shadow aq */
         transition: 0.3s ease;
     }
 
@@ -66,20 +65,21 @@ header {
         transform: translateY(-5px);
     }
 
+    /* navigation menu */
     nav {
         position: absolute;
         top: 30px;
         left: 40px;
         display: flex;
         gap: 20px;
-    
+
         .menu-link {
             text-decoration: none;
             font-size: 20px;
             color: white;
             transition: all 0.3s ease;
         }
-        
+
         .menu-link:hover {
             transform: translateY(-5px);
             font-weight: bold;
@@ -87,6 +87,7 @@ header {
     }
 }
 
+/* animated carousel */
 .carrossel-container {
     overflow: hidden;
     white-space: nowrap;
@@ -94,22 +95,22 @@ header {
     padding: 10px 0;
     position: relative;
     width: 100%;
+
+    .marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 15s linear infinite;
+    }
+
+    .marquee span {
+        display: inline-block;
+        padding: 0 40px;
+        font-size: 18px;
+        color: #555;
+    }
 }
 
-.marquee {
-    display: flex;
-    width: max-content;
-    animation: marquee 15s linear infinite;
-}
-
-.marquee span {
-    display: inline-block;
-    padding: 0 40px;
-    font-size: 18px;
-    color: #555;
-}
-
-/* Animação contínua */
+/* continuous scrolling animation */
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -117,4 +118,199 @@ header {
     100% {
         transform: translateX(-50%);
     }
+}
+
+/* sections */
+.menus {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#information {
+    background: linear-gradient(135deg, #93C7FF, #6096BA);
+    color: white;
+}
+
+#packages {
+    background: linear-gradient(135deg, #FFABAB, #FF8E72);
+    color: white;
+}
+
+#photos {
+    background: linear-gradient(135deg, #B5E48C, #99D98C);
+    color: white;
+}
+
+/* section text styles */
+.menus h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menus p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+
+        li a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: var(--base);
+            transition: background 0.3s ease, border-radius 0.3s ease;
+        }
+
+        li a:hover {
+            background-color: var(--base-100);
+            border-radius: 10px;
+            text-decoration: none;
+        }
+    }
+
+    /* mobile menu toggle */
+    .mobile-toggle {
+        display: none;
+        color: var(--base-800);
+        padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .mobile-toggle {
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
+}
+
+/* responsive adjustments */
+@media (max-width: 1024px), (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+/* package section */
+.package-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* individual package card */
+.package-card {
+    width: 280px;
+    height: 380px;
+    background: white;
+    color: #555;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+/* expanded package view */
+.expanded-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 500px;
+    height: 600px;
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+.expanded-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* navigation buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* overlay blur background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 99;
 }
