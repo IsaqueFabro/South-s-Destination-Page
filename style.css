@@ -244,73 +244,91 @@ nav {
     transform: scale(1.05);
 }
 
-/* expanded package view */
-.expanded-card {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 500px;
-    height: 600px;
-    transition: transform 0.3s ease;
-    z-index: 100;
-}
-
-.expanded-content img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* navigation buttons */
-.prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
-/* close button */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* overlay blur background */
-.overlay {
+/* Modal (card expandido) */
+.modal {
+    display: none; /* Inicialmente escondido */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 99;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    width: 70%; /* Diminuir a largura do modal */
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    overflow-y: auto; /* Adicionar rolagem se necessário */
+    max-height: 90%; /* Limitar a altura */
+}
+
+.modal-content img {
+    width: 100%; /* Reduzir o tamanho da imagem */
+    max-width: 400px; /* Limitar o tamanho máximo da imagem */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.package-card {
+    width: 280px;
+    height: 380px;
+    background: white;
+    color: #555;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para o botão "Comprar agora" */
+.buy-now {
+    background-color: #28a745; /* Cor verde */
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+/* Efeito de hover no botão */
+.buy-now:hover {
+    background-color: #218838;
+}
+
+.price {
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa a fonte em negrito */
+    color: #e74c3c; /* Altere para a cor desejada (exemplo: vermelho) */
 }

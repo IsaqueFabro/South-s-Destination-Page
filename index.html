@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
     <title>South's Destinations</title>
 </head>
 <body>
@@ -57,49 +59,54 @@
             <li>📆 Como faço para remarcar uma viagem?</li>
         </ul>
     </section>
-    
+
     <section id="packages" class="menus">
         <h1>Veja os pacotes aqui</h1>
         <div class="package-grid">
-            <div class="package-card" onclick="expandCard(this)">
+            <div class="package-card" onclick="expandCard(this)" data-description="Explore as ruas históricas de Londres, com visitas aos famosos museus, à Torre de Londres e ao Palácio de Buckingham. Passeios inclusos e muito mais!">
                 <img src="imgs/hotels/london.jfif" alt="Londres">
                 <h2> 🌇 Londres</h2>
                 <p>7 dias e 6 noites - Café da manhã incluso</p>
                 <span class="price">$ 4.999,00</span>
             </div>
     
-            <div class="package-card" onclick="expandCard(this)">
+            <div class="package-card" onclick="expandCard(this)" data-description="Paris oferece uma experiência única, com a visita à Torre Eiffel, ao Museu do Louvre e aos charmosos cafés parisienses. Uma viagem imperdível!">
                 <img src="imgs/hotels/paris.jfif" alt="Paris">
                 <h2>🗼 Paris</h2>
                 <p>5 dias e 4 noites - Café da manhã incluso</p>
                 <span class="price">$ 3.799,00</span>
             </div>
     
-            <div class="package-card" onclick="expandCard(this)">
+            <div class="package-card" onclick="expandCard(this)" data-description="Em Nova York, você vai conhecer a Estátua da Liberdade, passeios pelos parques e muitos pontos turísticos imperdíveis. Prepare-se para viver a Big Apple!">
                 <img src="imgs/hotels/plaza.jfif" alt="Nova York">
                 <h2>🗽 Nova York</h2>
                 <p>6 dias e 5 noites - Passeios inclusos</p>
                 <span class="price">$ 5.299,00</span>
             </div>
         </div>
-    
-        <!-- Card Expandido -->
-        <div id="expanded-card" class="expanded-card">
-            <button class="close-btn" onclick="closeCard()">✖</button>
-            <div class="expanded-content">
-                <button class="prev-btn" onclick="prevImage()">❮</button>
-                <img id="expanded-img" src="" alt="Destino">
-                <button class="next-btn" onclick="nextImage()">❯</button>
-            </div>
-            <h2 id="expanded-title"></h2>
-            <p id="expanded-description"></p>
-            <span id="expanded-price" class="price"></span>
-        </div>
-    
-        <!-- Fundo com Blur -->
-        <div id="overlay" class="overlay" onclick="closeCard()"></div>
     </section>
     
+<!-- Modal para exibir o card expandido -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="close" class="close">&times;</span>
+        <div id="modal-info">
+            <!-- Imagens e setas para navegação -->
+            <div class="image-carousel">
+                <button class="carousel-btn prev" id="prev-img">&#10094;</button> <!-- seta anterior -->
+                <img id="carousel-img" src="" alt="Imagem do pacote">
+                <button class="carousel-btn next" id="next-img">&#10095;</button> <!-- seta próxima -->
+            </div>
+            <!-- Informações adicionais, preço, etc. -->
+            <h2 id="destination"></h2>
+            <p id="description"></p>
+            <span id="price" class="price"></span>
+            <p id="additional-info"><strong>Mais informações:</strong><br></p>
+        </div>
+        <!-- Botão de comprar agora -->
+        <button id="buy-now" class="buy-now">Comprar agora</button>
+    </div>
+</div>
     <section id="photos" class="menus">
         <h1>Fotos de lugares</h1>
         <p>Confira alguns dos destinos mais incríveis do mundo:</p>
